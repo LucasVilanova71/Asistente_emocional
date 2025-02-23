@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Emocional</title>
+</head>
+<body>
+    <h1>Chat Emocional</h1>
+    <form method="POST" action="/chat">
+        <input type="text" name="message" placeholder="Escribe tu mensaje..." required>
+        <button type="submit">Enviar</button>
+    </form>
+    {% if user_message %}
+        <p><strong>Tú:</strong> {{ user_message }}</p>
+        <p><strong>Bot:</strong> {{ bot_message }}</p>
+    {% endif %}
+</body>
+</html>
